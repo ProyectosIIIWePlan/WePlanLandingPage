@@ -22,8 +22,45 @@ header{
     padding: 10px 0;
     align-items: center;
 }
-main {
-  flex: 1;
+.WeplanSlogan {
+  display: flex;                
+  align-items: center;         
+  justify-content: flex-start;  
+  padding: 60px 10%;            
+  gap: 40px;                    
+  background-color: #D5F8F2;    
+}
+
+/* Imagen */
+.imgFriends {
+  width: 300px;       
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;     
+}
+
+@media (max-width: 768px) {
+  .WeplanSlogan {
+    flex-direction: column;  
+    text-align: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .imgFriends {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* Texto */
+.WeplanSlogan p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #009A9C;
+  margin: 0;
+  max-width: 500px;
+  line-height: 1.3;
 }
 .logo {
   display: flex;
@@ -34,6 +71,14 @@ main {
 .logo img {
   height: 100px; 
   width: auto;
+}
+
+.imgFriends{
+  width: 300px;          
+  height: auto;          
+  float: auto;           
+  margin: 20px 30px 20px 0; 
+  border-radius: 10px;   
 }
 nav ul {
   list-style: none;
@@ -52,6 +97,137 @@ nav a {
 nav a:hover {
   color: #000000; 
 }
+
+
+/*div1 preguntas y soluciones*/
+
+.travel-Questions{
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #D5F8F2;
+  color: #000;
+}
+.travel-Questions h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.container-Questions{
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.questions{
+  border: 2px solid #000;
+  padding: 25px;
+  width: 280px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #D5F8F2;
+  transition: transform 0.3s;
+}
+.questions:hover{
+  transform: scale(1.05);
+}
+
+.Solutions{
+  margin-top: 20px; 
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .container-Questions {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+/* Funcionamiento Weplan*/
+.WePlan-steps{
+   text-align: center;
+  padding: 50px 20px;
+  background-color: #D5F8F2;
+  color: #000;
+}
+.WePlan-steps h2{
+ font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.container-steps{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.steps{
+   border: 2px solid #000;
+  padding: 25px;
+  width: 280px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #D5F8F2;
+  transition: transform 0.3s;
+}
+.steps:hover{
+  transform: scale(1.05);
+}
+.line{
+  border: none;
+  height: 3px;
+  background-color: #FF6A33;
+  width: 100vw;
+  margin: 40px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*funcionalidades de wePlan*/
+.container-features{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.features{
+  border: 2px solid #000;
+  padding: 25px;
+  width: 280px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #D5F8F2;
+  transition: transform 0.3s;
+}
+.features:hover{
+  transform: scale(1.05); 
+}
+
+
+
+@media (max-width: 768px) {
+  .container-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+
+
+
+
+
+
+
    
 
 /* footer*/
@@ -61,7 +237,7 @@ footer {
   color: #D5F8F2;
   padding: 30px 20px;
   text-align: center;
-  margin-top: 50px;
+  margin-top: auto;
 }
 
 .footer-contenido {
