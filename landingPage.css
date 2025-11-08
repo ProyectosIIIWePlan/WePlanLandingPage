@@ -3,6 +3,7 @@ body{
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #D5F8F2;
+    overflow-x: hidden;
 }
 html, body {
   height: 100%;
@@ -246,8 +247,8 @@ nav a:hover {
   border: none;
   height: 3px;
   background-color: #FF6A33;
-  width: 100vw;
-  margin: 20px 0px 20px 20px;
+  width: 102vw;
+  margin: 20px 0px 20px -20px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -286,13 +287,79 @@ nav a:hover {
 }
 
 
+/*Formulario*/
 
+.Form-Section {
+  background-color: #D5F8F2;
+  padding: 40px 20px;
+  text-align: center;
+}
 
+.Form-Section h2 {
+  font-size: 2rem;
+  color: #009A9C;
+  margin-bottom: 10px;
+}
 
+.Form-Section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #333;
+}
 
+.Form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
+.Form label {
+  grid-column: span 2;
+  text-align: left;
+  font-weight: bold;
+  color: #000;
+}
 
-   
+.Form input,
+.Form select {
+  grid-column: span 2;
+  padding: 10px;
+  border: 2px solid #009A9C;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.Form button {
+  grid-column: span 2;
+  padding: 12px;
+  background-color: #009A9C;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Form button:hover {
+  background-color: #007B7C;
+}
+
+@media (max-width: 768px) {
+  .Form {
+    grid-template-columns: 1fr;
+  }
+
+  .Form label,
+  .Form input,
+  .Form select,
+  .Form button {
+    grid-column: span 1;
+  }
+}
 
 /* footer*/
 

@@ -89,6 +89,7 @@
           <h3>Historial de viajes</h3>
           <p>Accede a un historial completo de tus viajes y gastos anteriores.</p>
         </div>
+        <hr class="line">
     </section>
 
     <!-- aqui va la section de la demo y la presentacion -->
@@ -99,7 +100,42 @@
 
 
 
-    <!--aqui va el formulario-->
+    <!--aqui va el formulario -->
+
+  <section class="Form-Section">
+    <h2>Únete a nosotros</h2>
+    <p>Serás el primero en acceder cuando lancemos la app</p>
+    <form class="Form">
+      <label for="Name">Nombre:</label>
+      <input type="text" id="Name" name="Name" required>
+
+      <label for="Surname1">Primer apellido:</label>
+      <input type="text" id="Surname1" name="Surname1" required>
+
+      <label for="Surname2">Segundo apellido:</label>
+      <input type="text" id="Surname2" name="Surname2" required>
+
+      <label for="Age">Edad:</label>
+      <input type="number" id="Age" name="Age" min="0" required>
+
+        <label for="sex">Sexo:</label>
+      <select id="sex" name="sex" required>
+        <option value="">Selecciona</option>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="otro">Otro</option>
+        <option value="si">si</option>
+      </select>
+
+      <label for="TF">Teléfono:</label>
+      <input type="tel" id="TF" name="TF" min="0" required>
+
+      <label for="Email">E-mail:</label>
+      <input type="email" id="Email" name="Email" pattern=".+@gmail\.com" required>
+
+      <button type="submit">ENVIAR</button>
+    </form>
+  </section>
     <!--footer-->
     <footer>
   <div class="footer-contenido">
