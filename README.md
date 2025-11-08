@@ -3,7 +3,7 @@ Este es el repositorio de la Landing Page de WePlanDemo, una aplicación web dis
 
 A continuación se detallan las características principales y las tecnologías utilizadas.
 
- Características de la Landing Page
+ ##Características de la Landing Page
  Presentación visual del proyecto con diseño responsive
 
  Explicación clara de funcionalidades clave: viaje, bote, gestión de gastos
@@ -14,7 +14,7 @@ A continuación se detallan las características principales y las tecnologías 
 
  Menú adaptable para dispositivos móviles
 
- Funcionalidades del Proyecto WePlan
+ ##Funcionalidades del Proyecto WePlan
  Viaje
 Permite a los usuarios crear planes de viaje. En estos, se seleccionan los billetes de transporte y alojamiento previamente para dividir el precio entre los participantes antes de realizar la compra.
 
