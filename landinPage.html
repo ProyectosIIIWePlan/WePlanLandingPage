@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./landingPage.css">
-    <script src="./landingPage.js" ></script>
+    <script src="./landingPage.js" defer ></script>
     <title>WePlan</title>
     <link rel="icon" type="image/png" href="./media/WePlanLogoTransparente.png">
 </head>
 <body>
+
     <header>
         <div class="logo">
             <img src="./media/WePlanLogoTransparente.png" alt="Logo Principal pagina">
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="./landinPage.html">Inicio</a></li>
-                <li><a href="#about">Sobre nosotros</a></li>
-                <li><a href="#contact">Contactanos</a></li>
-                <li><a href="./log-inPage/log-in.html">Iniciar Sesión</a></li>
-                <li><a href="./registerPage/register-page.html" >Registrarse</a></li>    
-            </ul>
-            </nav>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <nav id="navLinks">
+          <ul class="nav-links">
+            <li><a href="./landinPage.html">Inicio</a></li>
+            <li><a href="#about">Sobre nosotros</a></li>
+            <li><a href="#contact">Contáctanos</a></li>
+            <li><a href="./log-inPage/log-in.html">Iniciar Sesión</a></li>
+            <li><a href="./registerPage/register-page.html">Registrarse</a></li>    
+          </ul>
+        </nav>
+        
     </header>
+
     <div class="WeplanSlogan">
+      
       <img src="./media/Amigos.png" alt="Friends WePlan" class="imgFriends">
       <p>El mundo te espera nosotros te llevamos.</p>
     </div>
     <!-- preguntas frecuentes -->
     <section class="travel-Questions">
+      <hr class="line">
       <h2>¿VIAJAR ES DIVERTIDO O UNA PESADILLA?</h2>
       <div class="container-Questions">
         <div class="questions">
@@ -48,6 +54,7 @@
     </section>
     <!-- Como funciona la app y que funcionalidades tiene-->
     <section class="WePlan-steps">
+      <hr class="line">
       <h2>¿CÓMO FUNCIONA WEPLAN?</h2>
       <div class="container-steps">
         <div class="steps">
