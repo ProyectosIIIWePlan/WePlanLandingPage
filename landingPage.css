@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Lexend', sans-serif;
     background-color: #D5F8F2;
     overflow-x: hidden;
 }
@@ -172,6 +172,10 @@ nav a:hover {
   background-color: #D5F8F2;
   color: #000;
 }
+.travel-Questions img{
+  width: 40px;
+  height: 40px;
+}
 .travel-Questions h2 {
   font-size: 1.8rem;
   font-weight: bold;
@@ -201,8 +205,8 @@ nav a:hover {
 .Solutions{
   margin-top: 10px; 
   font-size: 1rem;
+  font-weight: 700;
   color: #333;
-  font-weight: bold;
 }
 @media (max-width: 768px) {
   .container-Questions {
@@ -246,7 +250,8 @@ nav a:hover {
 .line{
   border: none;
   height: 3px;
-  background-color: #FF6A33;
+  /*009A9C #336665*/
+  background-color: #009A9C;
   width: 102vw;
   margin: 20px 0px 20px -20px;
   position: relative;
@@ -286,7 +291,11 @@ nav a:hover {
   }
 }
 
-
+/*Presentacion*/
+.Canva{
+  text-align: center;
+  padding: 40px 20px;
+}
 /*Formulario*/
 
 .Form-Section {
