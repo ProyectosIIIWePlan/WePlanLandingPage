@@ -1,3 +1,4 @@
+
 :root{
     --pri-lightest: #D5F8F2;
     --pri-light: #99FFF0;
@@ -11,6 +12,7 @@
     --sec-normal: #FF6A33;
     --sec-dark: #9A3916;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -22,12 +24,14 @@ body{
     background-color: #D5F8F2;
     overflow-x: hidden;
 }
+
 html, body {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
+
 header{
   top: 0;
   left: 0;
@@ -44,6 +48,7 @@ header{
 }
 
 /* Para que sea rsponsive con moviles*/
+
 @media (max-width: 768px) {
   header {
     flex-direction: column; 
@@ -65,7 +70,6 @@ header{
   }
 }
 
-
 .WeplanSlogan {
   display: flex;                
   align-items: center;         
@@ -74,7 +78,9 @@ header{
   gap: 40px;                    
   background-color: #D5F8F2;    /*#85D4D0*/
 }
+
 /* Imagen */
+
 .WeplanSlogan img {
   width: 400px;       
   height: auto;
@@ -97,6 +103,7 @@ header{
 }
 
 /* Texto */
+
 .WeplanSlogan p {
   font-size: 1.8rem;
   font-weight: bold;
@@ -123,6 +130,7 @@ header{
   margin: 20px 30px 20px 0; 
   border-radius: 10px;   
 }
+
 nav ul {
   list-style: none;
   display: flex;
@@ -137,6 +145,7 @@ nav a {
   font-weight: bold;
   transition: color 0.3s;
 }
+
 nav a:hover {
   color: #000000; 
 }
@@ -177,8 +186,6 @@ nav a:hover {
   }
 }
 
-
-
 /*div1 preguntas y soluciones*/
 
 .travel-Questions{
@@ -187,15 +194,18 @@ nav a:hover {
   background-color: #85D4D0;
   color: #000;
 }
+
 .travel-Questions img{
   width: 40px;
   height: 40px;
 }
+
 .travel-Questions h2 {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
+
 .container-Questions{
 
   display: flex;
@@ -203,6 +213,7 @@ nav a:hover {
   gap: 30px;
   flex-wrap: wrap;
 }
+
 .questions{
   border: 2px solid #000;
   padding: 25px;
@@ -223,6 +234,7 @@ nav a:hover {
   font-weight: 700;
   color: #333;
 }
+
 @media (max-width: 768px) {
   .container-Questions {
     flex-direction: column;
@@ -232,10 +244,11 @@ nav a:hover {
 }
 
 /* Funcionamiento Weplan*/
+
 .WePlan-steps{
   text-align: center;
   padding: 10px;
-  background-color: #D5F8F2;
+  background-color: #D5F8F2 ;
   color: #000;
 }
 .WePlan-steps h2{
@@ -262,19 +275,15 @@ nav a:hover {
 .steps:hover{
   transform: scale(1.05);
 }
-.line{
-  border: none;
-  height: 3px;
-  /*009A9C #336665*/
-  background-color: #009A9C;
-  width: 102vw;
-  margin: 20px 0px 20px -20px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
 
 /*funcionalidades de wePlan*/
+
+.WePlan-features{
+  text-align: center;
+  padding: 10px;
+  background-color: #85D4D0 ;
+  color: #000;
+}
 .container-features{
   display: flex;
   justify-content: center;
@@ -289,20 +298,43 @@ nav a:hover {
   font-size: 1rem;
   font-weight: bold;
   border-radius: 5px;
-  background-color:#85D4D0 ;
+  background-color:#D5F8F2;
   transition: transform 0.3s;
 }
 .features:hover{
   transform: scale(1.05); 
 }
 
-
-
 @media (max-width: 768px) {
   .container-steps {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+  }
+}
+
+/*DEMOVIDEO*/
+.DemoVideo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: center;
+  padding: 20px;
+  background-color:#D5F8F2;
+  text-align: center;
+}
+
+.DemoVideo video {
+  width: 90%;         
+  max-width: 1344px;   
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .DemoVideo video {
+    width: 80%;
+    max-width: 100%;
   }
 }
 
@@ -347,8 +379,7 @@ nav a:hover {
   color: #000;
 }
 
-.Form input,
-.Form select {
+.Form input, .Form select {
   grid-column: span 2;
   padding: 10px;
   border: 2px solid #009A9C;
@@ -411,7 +442,6 @@ footer {
   gap: 10px;
 }
 
-
 .footer-enlaces {
   display: flex;
   gap: 20px;
@@ -439,13 +469,6 @@ footer {
 .footer-redes a:hover {
   color: #000000;
 }
-
-/*@media (max-width: 768px) {
-  .footer-contenido {
-    flex-direction: column;
-    gap: 15px;
-  }
-}*/
 
 @media (max-width: 768px) {
   .footer-contenido {
