@@ -10,9 +10,9 @@ function App()
     <>
      <Intro></Intro>
     <div className="intro-content">
-        TIEMPO
+        Hola Conchi
     </div>
-    como te va bro
+    A WePlan Application
     </>
    
   )

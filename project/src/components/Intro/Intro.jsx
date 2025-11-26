@@ -1,8 +1,6 @@
-// ...existing code...
 import { useEffect, useState } from "react";
 import "./Intro.css";
 import logo from "../../assets/WePlanLogoTransparente.png";
-
 
 export default function GTAIntroDemo({
   startScale = 3.5,
@@ -20,47 +18,40 @@ export default function GTAIntroDemo({
   }, [scrollEnabled]);
 
   useEffect(() => {
-    if (scrollEnabled) return;
-
     const handleWheel = (e) => {
-      e.preventDefault();
       const delta = e.deltaY;
-      setProgress((p) => {
-        const next = Math.min(1, Math.max(0, p + delta * wheelSensitivity));
-        if (next === 0) {
-          setScrollEnabled(false);
+
+      
+      if (!scrollEnabled) 
+      {
+        e.preventDefault();
+        setProgress((p) => {
+          const next = Math.min(1, Math.max(0, p + delta * wheelSensitivity));
+          // Activar scroll cuando llegue a 0.95
+          if (next >= 0.95) { setScrollEnabled(true); }
+          return next;
+        });
+      } else {
+        // Si está en scroll normal y scrollea hacia arriba desde el top
+        if (window.scrollY === 0 && delta < 0) 
+        {
+          e.preventDefault();
+          setProgress((p) => {
+            const next = Math.min(1, Math.max(0, p + delta * wheelSensitivity));
+            // Volver a animación si retrocede
+            if (next < 0.95) { setScrollEnabled(false); }
+            return next;
+          });
         }
-        return next;
-      });
-    };
-
-    const keyStep = Math.max(0.02, wheelSensitivity * 50); 
-
-    const handleKey = (e) => {
-     
-      if (scrollEnabled) return;
-      if (e.key === "ArrowDown") {
-        e.preventDefault();
-        setProgress((p) => Math.min(1, p + keyStep));
-      } else if (e.key === "ArrowUp") {
-        e.preventDefault();
-        setProgress((p) => Math.max(0, p - keyStep));
-      } 
+      }
     };
 
     window.addEventListener("wheel", handleWheel, { passive: false });
-    window.addEventListener("keydown", handleKey, { passive: false });
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
-      window.removeEventListener("keydown", handleKey);
     };
   }, [scrollEnabled, wheelSensitivity]);
-
-  useEffect(() => {
-    setScrollEnabled(progress >= 0.95);
-  }, [progress]);
-
 
   const scale = startScale - progress * (startScale - minScale);
   const textOpacity = Math.max(0, 1 - progress * 2.5);
@@ -71,7 +62,6 @@ export default function GTAIntroDemo({
       <div
         className="intro-hero"
         style={{
-          // fixed durante la animación, luego absolute para no "seguir" al scroll del viewport
           position: scrollEnabled ? "absolute" : "fixed",
           zIndex: scrollEnabled ? -1 : 5,
         }}
@@ -93,6 +83,3 @@ export default function GTAIntroDemo({
     </div>
   );
 }
-
-// src="https://picsum.photos/1500/900"
-// src={logo}
