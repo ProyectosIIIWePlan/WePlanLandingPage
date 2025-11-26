@@ -10,12 +10,9 @@ function App()
     <>
      <Intro></Intro>
     <div className="intro-content">
-        Empieza el scroll normal aquí ↓
+        TIEMPO
     </div>
-
-    <h2>BOMBOCLAT</h2>
-    <h2>pito</h2>
-    <h2>chococonhi</h2>
+    como te va bro
     </>
    
   )
