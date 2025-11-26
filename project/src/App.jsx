@@ -7,9 +7,17 @@ import Intro from './components/Intro/Intro.jsx';
 function App()
 {
   return (
-    <body>
-      <Intro></Intro>
-    </body>
+    <>
+     <Intro></Intro>
+    <div className="intro-content">
+        Empieza el scroll normal aquí ↓
+    </div>
+
+    <h2>BOMBOCLAT</h2>
+    <h2>pito</h2>
+    <h2>chococonhi</h2>
+    </>
+   
   )
 }
 

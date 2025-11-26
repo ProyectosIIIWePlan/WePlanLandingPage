@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import reactLogo from '../../assets/react.svg';
+import "./Intro.css";
 
 export default function GTAIntroDemo() {
   const [progress, setProgress] = useState(0);
@@ -22,6 +22,9 @@ export default function GTAIntroDemo() {
 
       setProgress((p) => {
         const next = Math.min(1, Math.max(0, p + delta * 0.0005));
+        if (next === 0) {
+          setScrollEnabled(false);
+        }
         return next;
       });
     };
@@ -32,29 +35,36 @@ export default function GTAIntroDemo() {
   }, [scrollEnabled]);
 
   useEffect(() => {
-    if (progress === 1) {
+    if (progress >= 0.95) {
       setScrollEnabled(true);
     }
   }, [progress]);
 
-  const scale = 1 - progress * 0.6;
-  const opacity = 1 - progress * 0.7;
+  const scale = 3 - progress * 2.7;
+  const textOpacity = Math.max(0, 1 - progress * 2.5);
 
   return (
-    <div className="w-full h-[300vh] bg-neutral-900 text-white">
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+    <div className="intro-container">
+      <div 
+        className="intro-hero"
+        style={{ 
+          position: scrollEnabled ? "absolute" : "fixed",
+          zIndex: scrollEnabled ? -1 : 5 
+        }}
+      >
+        <div className="intro-text" style={{ opacity: textOpacity }}>
+          WEPLAN
+        </div>
+
         <img
           src="https://picsum.photos/1500/900"
-          className="transition-transform transition-opacity duration-75"
+          className="intro-image"
+          alt="Intro"
           style={{
             transform: `scale(${scale})`,
-            opacity,
+            opacity: progress > 0 ? 1 : 0,
           }}
         />
-      </div>
-
-      <div className="w-full h-screen flex items-center justify-center text-4xl font-bold">
-        Empieza el scroll normal aquí ↓
       </div>
     </div>
   );
