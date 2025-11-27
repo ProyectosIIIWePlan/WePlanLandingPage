@@ -13,6 +13,9 @@ function App() {
         <ScrollText text={"\"El mundo te espera, nosotros te llevamos.\""} />
       </section>
       <ChartSection />
+      <section className="intro-content text-style">
+        <ScrollText text={"\"Con Weplan esto se soluciona.\""} />
+      </section>
       <Interview />
       <BenefitsSection />
     </>
