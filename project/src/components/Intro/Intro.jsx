@@ -5,7 +5,7 @@ import Banner from "../../assets/banner.png";
 
 export default function GTAIntroDemo({
   startScale = 3.5,
-  minScale = 0.9,
+  minScale = 1,
   wheelSensitivity = 0.0003,
 }) {
   const [progress, setProgress] = useState(0);
