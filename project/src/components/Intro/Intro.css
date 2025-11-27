@@ -35,7 +35,7 @@ body {
 }
 
 .intro-text {
-  position: absolute;
+  position: absolute; 
   font-size: clamp(2rem, 12vw, 8rem);
   font-weight: 900;
   letter-spacing: 0.15em;

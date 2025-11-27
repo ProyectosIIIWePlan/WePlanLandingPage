@@ -2,7 +2,6 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  
 }
 
 *
@@ -12,10 +11,11 @@
 
 body {
   background-color: var(--color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
 }
 
-.text-style 
-{
+.text-style {
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: clamp(1.5rem, 5vw, 2.25rem);
@@ -26,13 +26,13 @@ body {
 
 .intro-content {
   width: 100%;
-  height: 100vh;
-  gap: 5vh;
+  min-height: 100vh; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  padding-top: 40px;
 }
 
 ::-webkit-scrollbar {
@@ -53,8 +53,9 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* Firefox */
 * {
   scrollbar-color: rgba(255, 255, 255, 0.2) rgb(10, 10, 10);
   scrollbar-width: thin;
 }
+
+

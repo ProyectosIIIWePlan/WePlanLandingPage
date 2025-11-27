@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Intro.css";
 import Nav from "../Nav/Nav.jsx";
+import Banner from "../../assets/banner.png";
 
 export default function GTAIntroDemo({
   startScale = 3.5,
@@ -83,7 +84,7 @@ export default function GTAIntroDemo({
         </div>
 
         <img
-          src="https://picsum.photos/1500/900"
+          src={Banner}
           className="intro-image"
           alt="Intro"
           style={{

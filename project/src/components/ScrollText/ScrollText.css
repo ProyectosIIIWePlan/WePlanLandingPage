@@ -16,10 +16,16 @@
   animation-timeline: view();
 }
 
+#scroll-text p {
+  font-size: 10vh;
+  line-height: 10vh;
+  margin: 0;
+  font-style: italic;
+}
 
 #scroll-text p span {
-  animation-range-start: cover 26vh;
-  animation-range-end: cover 65vh;
+  animation-range-start: cover 24vh;
+  animation-range-end: cover 70vh;
 }
 
 
