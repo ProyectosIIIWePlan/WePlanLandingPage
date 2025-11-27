@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Intro.css";
-import logo from "../../assets/WePlanLogoTransparente.png";
+import Nav from "../Nav/Nav.jsx";
 
 export default function GTAIntroDemo({
   startScale = 3.5,
@@ -9,6 +9,7 @@ export default function GTAIntroDemo({
 }) {
   const [progress, setProgress] = useState(0);
   const [scrollEnabled, setScrollEnabled] = useState(false);
+  const [navVisible, setNavVisible] = useState(false);
 
   useEffect(() => {
     document.body.style.overflow = scrollEnabled ? "auto" : "hidden";
@@ -53,6 +54,17 @@ export default function GTAIntroDemo({
     };
   }, [scrollEnabled, wheelSensitivity]);
 
+  useEffect(() => {
+    if (!navVisible && progress >= 0.93) {
+      setNavVisible(true);
+    }
+
+    if (navVisible && progress < 0.93) {
+      setNavVisible(false);
+    }
+
+  }, [progress, navVisible]);
+
   const scale = startScale - progress * (startScale - minScale);
   const textOpacity = Math.max(0, 1 - progress * 2.5);
   const imageOpacity = Math.min(1, progress * 1.1);
@@ -79,6 +91,9 @@ export default function GTAIntroDemo({
             opacity: imageOpacity,
           }}
         />
+      </div>
+      <div className={`intro-nav-wrapper ${navVisible ? "intro-nav-visible" : ""}`}>
+        <Nav/>
       </div>
     </div>
   );

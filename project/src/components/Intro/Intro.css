@@ -63,6 +63,28 @@ body {
   border-radius: 8px;
 }
 
+/* Contenedor de la navbar animada */
+.intro-nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* Cuando la animación ha acabado y navVisible = true */
+.intro-nav-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media (max-width: 1024px) {
   .intro-image {
     width: 600px;
