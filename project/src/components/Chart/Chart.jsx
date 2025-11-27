@@ -1,19 +1,20 @@
 import React from "react";
-import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Bar } from "react-chartjs-2";
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
 
 // Registramos los elementos de Chart.js
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const ProblemChart = ({ percentage, title, description, color }) => {
+const ProblemBarChart = ({ data, title }) => {
   const chartData = {
-    labels: [`${percentage}%`, `${100 - percentage}%`],
+    labels: data.map(item => item.title),  // Títulos de los problemas
     datasets: [
       {
-        data: [percentage, 100 - percentage],
-        backgroundColor: [color, "#ddd"], // Colores vibrantes
-        borderColor: "#fff",
-        borderWidth: 2,
+        label: '% de personas afectadas',
+        data: data.map(item => item.percentage),  // Porcentajes
+        backgroundColor: ['#FF6F61', '#3F51B5', '#00BCD4', '#FFEB3B', '#9C27B0', '#8BC34A'],  // Colores personalizados
+        borderColor: '#fff',
+        borderWidth: 1,
       },
     ],
   };
@@ -21,28 +22,32 @@ const ProblemChart = ({ percentage, title, description, color }) => {
   const options = {
     responsive: true,
     plugins: {
-      tooltip: {
-        enabled: false, // Deshabilitamos el tooltip, ya que tenemos las etiquetas personalizadas
+      title: {
+        display: true,
+        text: title,
+        font: {
+          size: 24,
+        },
       },
-      legend: {
-        display: false, // No mostramos la leyenda de las gráficas
+      tooltip: {
+        callbacks: {
+          label: function (tooltipItem) {
+            return `${tooltipItem.raw}%`; // Mostrar el porcentaje en el tooltip
+          },
+        },
+      },
+    },
+    scales: {
+      y: {
+        beginAtZero: true, // Empieza en 0 para que se vea bien la escala
+        ticks: {
+          stepSize: 10, // Pasos en el eje Y
+        },
       },
     },
   };
 
-  return (
-    <div className="problem-chart-container">
-      <div className="chart-item">
-        <div className="chart-queso">
-          <Doughnut data={chartData} options={options} />
-        </div>
-        <div className="chart-label">
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </div>
-      </div>
-    </div>
-  );
+  return <Bar data={chartData} options={options} />;
 };
 
-export default ProblemChart;
+export default ProblemBarChart;

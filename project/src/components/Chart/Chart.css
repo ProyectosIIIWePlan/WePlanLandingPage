@@ -1,85 +1,32 @@
-.problem-chart-container {
+.problem-charts {
   width: 100%;
   display: flex;
-  justify-content: flex-start; /* Los gráficos se alinean al principio */
-  flex-wrap: wrap;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 60px 12%;
   background-color: #1e1e24;
 }
 
+.section-title {
+  color: #eaeaea;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.charts-container {
+  width: 100%;
+  max-width: 800px; /* Máximo tamaño del gráfico */
+}
+
 .chart-item {
   display: flex;
-  align-items: center;  /* Alineamos el gráfico y el texto */
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-bottom: 30px; /* Espaciado entre los elementos */
+  margin-bottom: 30px;
   background-color: #2a2a2e;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); /* Efecto de sombra 3D */
-}
-
-.chart-item.left {
-  justify-content: flex-start; /* Los gráficos con clase 'left' estarán a la izquierda */
-}
-
-.chart-item.right {
-  justify-content: flex-end; /* Los gráficos con clase 'right' estarán a la derecha */
-}
-
-.chart-item h3 {
-  color: #eaeaea;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-}
-
-.chart-label p {
-  font-size: 1rem;
-  color: #cfcfcf;
-  margin-top: 10px;
-}
-
-.chart-item .chart-queso {
-  margin-right: 20px;  /* Añadimos un margen entre el gráfico y el texto */
-  transform-origin: center center;
-  width: 300px; /* Aumentamos el tamaño del gráfico */
-  height: 300px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Sombra para efecto 3D */
-  border-radius: 50%;
-}
-
-.chart-item .chart-queso canvas {
-  border-radius: 50%; /* Mantener el gráfico redondeado */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Más sombra para 3D */
-}
-
-/* Eliminar el efecto hover */
-.chart-item .chart-queso:hover {
-  transform: none;  /* Desactivamos el efecto hover de rotación y escala */
-}
-
-@media (max-width: 800px) {
-  .problem-chart-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .chart-item {
-    flex-direction: column; /* En pantallas pequeñas, ponemos el texto debajo */
-    align-items: center;
-  }
-
-  .chart-item h3 {
-    text-align: center;
-  }
-
-  .chart-item .chart-queso {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .chart-label {
-    text-align: center;
-    margin-top: 20px;
-  }
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
