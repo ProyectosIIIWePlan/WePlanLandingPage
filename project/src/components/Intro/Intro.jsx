@@ -5,7 +5,7 @@ import logo from "../../assets/WePlanLogoTransparente.png";
 export default function GTAIntroDemo({
   startScale = 3.5,
   minScale = 0.9,
-  wheelSensitivity = 0.0004,
+  wheelSensitivity = 0.0003,
 }) {
   const [progress, setProgress] = useState(0);
   const [scrollEnabled, setScrollEnabled] = useState(false);
