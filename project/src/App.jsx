@@ -11,7 +11,7 @@ function App()
     <>
       <Intro></Intro>
       <section className="intro-content text-style ">
-          <ScrollText className="text-style" text={"la vida es como un sople de hielo que va marchitando flores"}/>
+          <ScrollText className="text-style" text={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eos delectus dolor magni, obcaecati et quo, dolorem qui possimus eveniet sapiente nisi nesciunt sed nemo mollitia maxime vero ipsam cum."}/>
           
           <p>
             Hola conchi
