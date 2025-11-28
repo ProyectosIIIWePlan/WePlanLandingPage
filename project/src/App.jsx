@@ -4,6 +4,10 @@ import ScrollText from './components/ScrollText/ScrollText.jsx';
 import Interview from './components/InterviewSection/InterviewSection.jsx';
 import BenefitsSection from './components/Benefits/BenefitsSection.jsx';
 import ChartSection from './components/Chart/ChartSection.jsx';
+import DemoSection from './components/Demo/DemoSection.jsx';
+import DemoCTASection from './components/Demo/DemoCTASection.jsx';
+import PresentationSection from './components/Presentation/PresentationSection.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 function App() {
   return (
@@ -16,8 +20,12 @@ function App() {
       <section className="intro-content text-style">
         <ScrollText text={"\"Con Weplan esto se soluciona.\""} />
       </section>
-      <Interview />
       <BenefitsSection />
+      <DemoSection />
+      <Interview />
+      <DemoCTASection />
+      <PresentationSection />
+      <Footer />
     </>
   )
 }

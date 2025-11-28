@@ -1,0 +1,104 @@
+.demo-cta {
+  width: 100%;
+  padding: 80px 12% 100px;
+  background-color: #18181f; /* un pelín más oscuro para diferenciar la sección */
+}
+
+.demo-cta-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Tarjeta del QR */
+.demo-cta-qr-card {
+  background-color: #2a2a2e;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.demo-cta-qr-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.demo-cta-qr-caption {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+
+/* Texto + botón */
+.demo-cta-content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.demo-cta-title {
+  margin-bottom: 14px;
+}
+
+.demo-cta-subtitle {
+  margin: 0 0 24px;
+  font-size: 1.05rem;
+  color: #d0d0d0;
+  line-height: 1.6;
+}
+
+/* Botón */
+.demo-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #cedc00, #8bb000);
+  color: #111;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+
+.demo-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.7);
+}
+
+.demo-cta-button:active {
+  transform: translateY(0px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .demo-cta {
+    padding: 60px 6% 80px;
+  }
+
+  .demo-cta-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .demo-cta-content {
+    text-align: center;
+  }
+
+  .demo-cta-title {
+    text-align: center;
+  }
+}

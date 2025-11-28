@@ -1,44 +1,112 @@
-import React from "react";
-import InterviewItem from "../Interview/Interview.jsx";
+import React, { useEffect, useRef, useState } from "react";
 import "./InterviewSection.css";
-import logo from "../../assets/WePlanLogoTransparente.png";
 
+function InterviewItem({ index, name, role, image, text }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);  // entra → aparece
+        } else {
+          setVisible(false); // sale → se oculta para volver a animar luego
+        }
+      },
+      { threshold: 0.3 }
+    );
 
-export default function InterviewsSection() {
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const sideClass =
+    index % 2 === 0 ? "interview-row--left" : "interview-row--right";
+
+  return (
+    <div
+      ref={ref}
+      className={`interview-row ${sideClass} ${
+        visible ? "is-visible" : ""
+      }`}
+    >
+      <div className="interview-card">
+        <div className="interview-photo-wrapper">
+          <img
+            src={image}
+            alt={`Foto de ${name}`}
+            className="interview-photo"
+          />
+        </div>
+        <div className="interview-content">
+          <h3 className="interview-name">{name}</h3>
+          {role && <p className="interview-role">{role}</p>}
+          <p className="interview-text">
+            {text}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function InterviewsLongSection() {
+  // Ejemplos — aquí luego pegas las entrevistas reales completas
   const interviews = [
     {
       name: "Laura Martínez",
-      image: logo,
-      quote:
-        "Organizar el viaje con mis amigos siempre era un caos. Esta app nos ahorraría horas de mensajes."
+      role: "Viaja todos los años con su grupo de amigos",
+      image: "/images/laura.jpg",
+      text:
+        "Organizar un viaje de 8 personas siempre había sido un caos. Entre mensajes sueltos, notas en el móvil y mil capturas de pantalla, " +
+        "acabábamos perdiendo información importante. Me estresaba especialmente el tema de los pagos: quién había puesto qué, quién debía a quién... " +
+        "Con algo como WEPLAN, tener tareas, gastos y decisiones en un solo sitio nos habría ahorrado muchas discusiones y muchísimas horas de organización."
     },
     {
       name: "Carlos Rivera",
-      image: logo,
-      quote:
-        "Lo que más valoro es tener las tareas y pagos en un solo sitio. Simplifica muchísimo."
+      role: "Padre de dos hijos, viaja en familia",
+      image: "/images/carlos.jpg",
+      text:
+        "Viajar en familia es una maravilla, pero la organización es otra historia. Cuando viajas con niños, todo tiene que estar muy claro: horarios, " +
+        "actividades, tiempos muertos, presupuesto... Muchas veces sentía que pasaba más tiempo organizando el viaje que disfrutándolo. Una herramienta " +
+        "donde pueda ver el itinerario, saber quién se encarga de qué y tener los pagos controlados me daría mucha tranquilidad y menos sensación de ir improvisando."
     },
     {
       name: "Ana López",
-      image: logo,
-      quote:
-        "Antes tardábamos días en decidir actividades. Con votaciones rápidas sería todo más fluido."
+      role: "Viajes improvisados con distintos grupos",
+      image: "/images/ana.jpg",
+      text:
+        "Lo que más me agobia es cuando en un grupo nadie se decide. En el chat se proponen ideas pero se pierden, nadie sabe qué se ha votado, " +
+        "y al final se decide todo a última hora. Me gustaría poder abrir una app, ver propuestas claras, votar rápido y que quede registrado " +
+        "qué se va a hacer cada día. Creo que eso evitaría muchos malentendidos y discusiones de último momento."
     }
   ];
 
   return (
-    <section className="interviews-section">
+    <section className="interviews-long-section">
+      <div className="interviews-long-inner">
+        <h2 className="interviews-long-title text-style">
+          Lo que dicen nuestros entrevistados
+        </h2>
+        <p className="interviews-long-subtitle">
+          Hablamos con personas que organizan viajes en grupo a menudo. Estas son algunas
+          de sus experiencias y dolores a la hora de planificar.
+        </p>
 
-      {interviews.map((interview, index) => (
-        <InterviewItem
-          key={index}
-          index={index}
-          name={interview.name}
-          image={interview.image}
-          quote={interview.quote}
-        />
-      ))}
+        <div className="interviews-long-list">
+          {interviews.map((interview, index) => (
+            <InterviewItem
+              key={index}
+              index={index}
+              name={interview.name}
+              role={interview.role}
+              image={interview.image}
+              text={interview.text}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
