@@ -83,6 +83,11 @@ export default function GTAIntroDemo({
           WEPLAN
         </div>
 
+        <div className="scroll-indicator">
+          <span className="arrow" style={{ opacity: textOpacity }}></span>
+        </div>
+
+
         <img
           src={Banner}
           className="intro-image"

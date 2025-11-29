@@ -121,3 +121,30 @@ body {
     transform: translate(-50%, -46%);
   }
 }
+
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.scroll-indicator .arrow {
+  width: 28px;
+  height: 28px;
+  border-left: 3px solid var(--accent-cool);
+  border-bottom: 3px solid var(--accent-cool);
+  transform: rotate(-45deg);
+  animation: scroll-bounce 1.4s infinite ease-in-out;
+  filter: drop-shadow(0 0 6px var(--accent-cool-soft));
+}
+
+@keyframes scroll-bounce {
+  0%   { transform: translateY(0) rotate(-45deg); }
+  50%  { transform: translateY(10px) rotate(-45deg); }
+  100% { transform: translateY(0) rotate(-45deg); }
+}
