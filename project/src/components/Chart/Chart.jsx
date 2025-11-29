@@ -14,7 +14,7 @@ const ProblemBarChart = ({ data, title }) => {
         data: data.map(item => item.percentage),  // Porcentajes
         backgroundColor: ['#FF6F61', '#3F51B5', '#00BCD4', '#FFEB3B', '#9C27B0', '#8BC34A'],  // Colores personalizados
         borderColor: '#fff',
-        borderWidth: 1,
+        borderWidth: 0,
       },
     ],
   };

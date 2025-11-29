@@ -1,7 +1,7 @@
 .demo-section {
   width: 100%;
   padding: 80px 12% 100px;
-  background-color: #1e1e24;
+  background-color: var(--bg-main);
 }
 
 .demo-inner {
@@ -12,6 +12,8 @@
 .demo-title {
   text-align: center;
   margin-bottom: 60px;
+  color: var(--text-main);
+  font-size: 3rem;
 }
 
 /* Lista de pasos */
@@ -40,23 +42,25 @@
 /* Tarjeta del paso */
 .demo-step-card {
   max-width: 480px;
-  background-color: #2a2a2e;
+  background-color: var(--bg-alt);
   padding: 24px 28px;
   border-radius: 18px;
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
   position: relative;
   opacity: 0;
-  transform: translateX(0); /* se ajusta según left/right abajo */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateX(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease-out;
 }
 
 /* Estado inicial (fuera de pantalla) */
 .demo-step--left .demo-step-card {
   transform: translateX(-80px);
+  border-left: 3px solid var(--accent-warm);
 }
 
 .demo-step--right .demo-step-card {
   transform: translateX(80px);
+  border-right: 3px solid var(--accent-cool);
 }
 
 /* Cuando entra en viewport */
@@ -73,14 +77,14 @@
   width: 32px;
   height: 32px;
   border-radius: 999px;
-  background: #cedc00;
-  color: #111;
+  background: linear-gradient(135deg, var(--accent-cool-soft), var(--accent-cool));
+  color: #041210;
   font-weight: 800;
   font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
 }
 
 .demo-step--right .demo-step-number {
@@ -91,14 +95,14 @@
 .demo-step-title {
   margin: 0 0 10px;
   font-size: 1.4rem;
-  color: #f5f5f5;
+  color: var(--text-main);
 }
 
 .demo-step-text {
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
-  color: #d0d0d0;
+  color: var(--text-muted);
 }
 
 /* Bloque vídeo */
@@ -107,12 +111,13 @@
 }
 
 .demo-video-title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 10px;
+  color: var(--text-main);
 }
 
 .demo-video-subtitle {
-  color: #d0d0d0;
+  color: var(--text-muted);
   margin-bottom: 30px;
 }
 
@@ -122,10 +127,13 @@
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 56.25%;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 0 0 1px rgba(0, 164, 142, 0.4),
+    0 18px 40px rgba(0, 0, 0, 0.7);
+  background-color: #000;
 }
 
 .demo-video-iframe {
@@ -157,5 +165,24 @@
 
   .demo-step--right .demo-step-number {
     right: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .demo-steps {
+    gap: 30px;
+  }
+
+  .demo-step-card {
+    padding: 20px 18px;
+    border-radius: 16px;
+  }
+
+  .demo-step-title {
+    font-size: 1.25rem;
+  }
+
+  .demo-step-text {
+    font-size: 0.95rem;
   }
 }

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import "./Intro.css";
 import Nav from "../Nav/Nav.jsx";
-import Banner from "../../assets/banner.png";
+import Banner from "../../assets/banner_2.png";
 
 export default function GTAIntroDemo({
   startScale = 3.5,
-  minScale = 1,
+  minScale = 1.2,
   wheelSensitivity = 0.0003,
 }) {
   const [progress, setProgress] = useState(0);

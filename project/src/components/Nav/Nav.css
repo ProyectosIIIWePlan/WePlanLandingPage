@@ -1,13 +1,15 @@
-
 .navbar {
   width: 100%;
-  padding: 15px 40px;
+  padding: 18px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background-color: #1e1e24;
-  border-bottom: 2px solid #cedc00;
+  background: linear-gradient(90deg, var(--bg-alt), var(--bg-main));
+  border-bottom: 1px solid rgba(0, 164, 142, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
 }
 
 .navbar-left {
@@ -16,23 +18,98 @@
 }
 
 .navbar-logo {
-  height: 50px;
+  height: 72px;
   width: auto;
+  filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.6));
+  transition: transform 0.25s ease-out;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
 }
 
 .navbar-right {
   display: flex;
-  gap: 30px; 
+  align-items: center;
+  gap: 32px;
 }
 
 .navbar-right a {
-  color: #f0f0f0;
-  font-size: 1.2em;
-  text-decoration: none;
+  position: relative;
+  color: var(--text-muted);
+  font-size: 1rem;
   font-weight: 500;
-  transition: 0.2s ease;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: 0.25s ease-out;
+}
+
+.navbar-right a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: linear-gradient(
+    90deg,
+    var(--accent-cool),
+    var(--accent-warm)
+  );
+  transition: width 0.25s ease-out;
+  border-radius: 999px;
 }
 
 .navbar-right a:hover {
-  color: #cedc00;
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.navbar-right a:hover::after {
+  width: 100%;
+}
+
+/* Responsive Tablet */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 14px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+/* Responsive Móvil */
+@media (max-width: 600px) {
+  .navbar {
+    align-items: center;
+    padding: 14px 4%;
+  }
+
+  .navbar-left {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-logo {
+    height: 60px;
+  }
+
+  .navbar-right {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .navbar-right a {
+    font-size: 0.92rem;
+  }
 }

@@ -22,8 +22,8 @@ function App() {
       </section>
       <BenefitsSection />
       <DemoSection />
-      <Interview />
       <DemoCTASection />
+      <Interview />
       <PresentationSection />
       <Footer />
     </>

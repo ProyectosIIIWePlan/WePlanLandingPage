@@ -31,7 +31,7 @@ export default function ProblemCharts() {
   ];
 
   return (
-    <section className="problem-charts">
+    <section id="problema" className="problem-charts">
       <h2 className="section-title text-style">Problemas frecuentes al organizar un viaje</h2>
       <div className="charts-container">
         <ProblemBarChart

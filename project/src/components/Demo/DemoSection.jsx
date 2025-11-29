@@ -62,7 +62,7 @@ export default function DemoSection() {
   ];
 
   return (
-    <section className="demo-section">
+    <section id="demo" className="demo-section">
       <div className="demo-inner">
         <h2 className="demo-title text-style">Así funciona la demo</h2>
 

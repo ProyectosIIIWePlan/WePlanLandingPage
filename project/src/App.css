@@ -1,29 +1,57 @@
+/* =========================================================
+   VARIABLES DE COLOR — PALETA CORPORATIVA
+========================================================= */
+:root {
+  --bg-main: #00362F;        /* Fondo general */
+  --bg-alt: #001F1A;         /* Secciones alternas */
+  --accent-warm: #F88800;    /* Acento cálido principal */
+  --accent-warm-soft: #FF9F29;
+  --accent-cool: #00A48E;    /* Acento frío principal */
+  --accent-cool-soft: #34BCAA;
+  --text-main: #E9FEFB;      /* Títulos y textos importantes */
+  --text-muted: #CFCFCF;     /* Textos secundarios */
+  --text-soft: #9DF2E6;      /* Detalles más suaves */
+}
+
+/* =========================================================
+   ROOT
+========================================================= */
 #root {
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
-*
-{
-  --color: #333;
+/* =========================================================
+   BODY
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
 }
+
 
 body {
-  background-color: var(--color);
+  background-color: var(--bg-main);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   margin: 0;
+  color: var(--text-main);
 }
 
+/* =========================================================
+   TEXTO PRINCIPAL (titles, slogans, etc.)
+========================================================= */
 .text-style {
-  color: white;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text-main);
   font-size: clamp(1.5rem, 5vw, 2.25rem);
   font-weight: 700;
   letter-spacing: 0.05em;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
 }
 
+/* =========================================================
+   BLOQUE DE ESPACIADO INTRO
+========================================================= */
 .intro-content {
   width: 100%;
   min-height: 100vh; 
@@ -31,31 +59,33 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--text-main);
   padding-top: 40px;
 }
 
+/* =========================================================
+   SCROLLBAR STYLING
+========================================================= */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--color);
+  background-color: var(--bg-alt);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--accent-cool-soft);
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: var(--accent-cool);
 }
 
+/* Firefox */
 * {
-  scrollbar-color: rgba(255, 255, 255, 0.2) rgb(10, 10, 10);
+  scrollbar-color: var(--accent-cool-soft) var(--bg-alt);
   scrollbar-width: thin;
 }
-
-

@@ -1,32 +1,87 @@
 .problem-charts {
   width: 100%;
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 60px 12%;
-  background-color: #1e1e24;
+  padding: 80px 12%;
+  background-color: var(--bg-alt);
 }
 
 .section-title {
-  color: #eaeaea;
+  color: var(--text-main);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
 }
 
 .charts-container {
   width: 100%;
-  max-width: 800px; /* Máximo tamaño del gráfico */
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
+/* Tarjeta */
 .chart-item {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
-  margin-bottom: 30px;
-  background-color: #2a2a2e;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  padding: 32px;
+  border-radius: 18px;
+  background-color: var(--bg-alt);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+  transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+/* Hover suave */
+.chart-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    0 0 0 1px rgba(0,164,142,0.3),
+    0 18px 50px rgba(0, 0, 0, 0.7);
+}
+
+/* Título del chart */
+.chart-item h3 {
+  color: var(--text-main);
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* Texto descriptivo */
+.chart-description {
+  margin-top: 18px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Mejor responsive */
+@media (max-width: 700px) {
+  .problem-charts {
+    padding: 60px 6%;
+  }
+
+  .charts-container {
+    gap: 32px;
+  }
+
+  .chart-item {
+    padding: 24px;
+  }
+
+  .chart-item h3 {
+    font-size: 1.25rem;
+  }
+
+  .chart-description {
+    font-size: 0.95rem;
+  }
 }

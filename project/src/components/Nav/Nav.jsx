@@ -14,9 +14,9 @@ export default function Navbar() {
       </div>
 
       <div className="navbar-right">
-        <a href="#link1">LTR1</a>
-        <a href="#link2">LTR2</a>
-        <a href="#link3">LTR3</a>
+        <a href="#problema">Problema</a>
+        <a href="#demo">Demo</a>
+        <a href="#contacto">Contacto</a>
       </div>
     </nav>
   );

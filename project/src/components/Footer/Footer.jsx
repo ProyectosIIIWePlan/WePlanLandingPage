@@ -13,7 +13,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="footer">
+    <footer id="contacto" className="footer">
       <div className="footer-inner">
 
        
