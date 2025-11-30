@@ -34,7 +34,7 @@ export default function BenefitsSection() {
 
   return (
     <section className="benefits-section">
-      <h2 className="section-title text-style">Beneficios</h2>
+      <h2 className="section-title text-style">Nuestros puntos fuertes</h2>
       <div className="benefits-container">
         {benefits.map((benefit, index) => (
           <div key={index} className="benefit-item">

@@ -64,7 +64,7 @@ export default function DemoSection() {
   return (
     <section id="demo" className="demo-section">
       <div className="demo-inner">
-        <h2 className="demo-title text-style">Así funciona la demo</h2>
+        <h2 className="demo-title text-style">¿Cómo funciona?</h2>
 
         <div className="demo-steps">
           {steps.map((step, index) => (
@@ -79,7 +79,7 @@ export default function DemoSection() {
 
         <div className="demo-video-block">
           <h3 className="demo-video-title text-style">
-            Mira la demo en acción
+            Nuestra demo en acción
           </h3>
           <p className="demo-video-subtitle">
             Un recorrido rápido por la app para que veas cómo se organiza un viaje real.
