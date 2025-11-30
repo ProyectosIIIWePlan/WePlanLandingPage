@@ -62,10 +62,10 @@ export default function InterviewsLongSection() {
       image: foto2,
       text:
         "Paula tiene 22 años, es de Plasencia y estudia un doble grado de Comunicación Audiovisual y Diseño Digital y Multimedia en Madrid." +
-"Es extrovertida, creativa y muy unida a su grupo de amigos, ahora repartidos por distintas ciudades de España." +
-"Le encantan la fotografía, el arte y los destinos poco comunes, priorizando el enriquecimiento cultural frente a la fiesta.\n\n" +
-"Le cuesta organizarse y nadie en el grupo quiere asumir la planificación del viaje, por lo que todo se vuelve tedioso." +
-"Ha usado Tricount y Booking, pero ve en WePlan una solución más completa para organizar el viaje, ahorrar tiempo y evitar discusiones por pagos."
+" Es extrovertida, creativa y muy unida a su grupo de amigos, ahora repartidos por distintas ciudades de España." +
+" Le encantan la fotografía, el arte y los destinos poco comunes, priorizando el enriquecimiento cultural frente a la fiesta.\n\n" +
+" Le cuesta organizarse y nadie en el grupo quiere asumir la planificación del viaje, por lo que todo se vuelve tedioso." +
+" Ha usado Tricount y Booking, pero ve en WePlan una solución más completa para organizar el viaje, ahorrar tiempo y evitar discusiones por pagos."
     },
     {
       name: "David Aranda Bracamonte",
@@ -73,10 +73,10 @@ export default function InterviewsLongSection() {
       image: foto1,
       text:
         "David tiene 20 años y estudia Fisioterapia; es el organizador oficial de los viajes de su grupo de 23 amigos." +
-"Le encanta viajar en grupo y vivir experiencias juntos, pero cada viaje le supone un gran esfuerzo de coordinación y gestión.\n\n" +
-"Se encarga de proponer fechas, buscar destinos, comparar alojamientos y coordinar transportes, asumiendo casi toda la responsabilidad." +
-"La gestión de pagos y reservas suele ser caótica: Bizums atrasados, adelantos mezclados y gente que reserva tarde o se equivoca." +
-"Por eso imagina WePlan como la herramienta ideal para centralizar itinerarios y pagos, ahorrar tiempo y reducir el estrés de organizar a tanta gente."
+" Le encanta viajar en grupo y vivir experiencias juntos, pero cada viaje le supone un gran esfuerzo de coordinación y gestión.\n\n" +
+" Se encarga de proponer fechas, buscar destinos, comparar alojamientos y coordinar transportes, asumiendo casi toda la responsabilidad." +
+" La gestión de pagos y reservas suele ser caótica: Bizums atrasados, adelantos mezclados y gente que reserva tarde o se equivoca." +
+" Por eso imagina WePlan como la herramienta ideal para centralizar itinerarios y pagos, ahorrar tiempo y reducir el estrés de organizar a tanta gente."
     },
     {
       name: "Ana López",
