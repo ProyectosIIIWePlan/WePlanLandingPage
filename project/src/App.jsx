@@ -18,7 +18,7 @@ function App() {
       </section>
       <ChartSection />
       <section className="intro-content text-style">
-        <ScrollText text={"\"La solución,\n WEPLAN.\""} />
+        <ScrollText text={"La solución, WEPLAN"} />
       </section>
       <BenefitsSection />
       <DemoSection />
