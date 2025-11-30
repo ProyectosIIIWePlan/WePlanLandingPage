@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./InterviewSection.css";
+import foto1 from "../../assets/david_aranda_bracamonte.png";
 
 function InterviewItem({ index, name, role, image, text }) {
   const ref = useRef(null);
@@ -70,13 +71,20 @@ export default function InterviewsLongSection() {
 "Por eso, ve en WePlan una solución completa que les permita organizar el viaje de forma sencilla, ahorrar tiempo, evitar discusiones por pagos y disfrutar de viajar como cuando lo hacía con sus padres, sin preocuparse de nada."
     },
     {
-      name: "Carlos Rivera",
-      role: "Padre de dos hijos, viaja en familia",
-      image: "/images/carlos.jpg",
+      name: "David Aranda Bracamonte",
+      role: "Estudiante de fisioterapia que organiza los viajes de su grupo de amigos.",
+      image: foto1,
       text:
-        "Viajar en familia es una maravilla, pero la organización es otra historia. Cuando viajas con niños, todo tiene que estar muy claro: horarios, " +
-        "actividades, tiempos muertos, presupuesto... Muchas veces sentía que pasaba más tiempo organizando el viaje que disfrutándolo. Una herramienta " +
-        "donde pueda ver el itinerario, saber quién se encarga de qué y tener los pagos controlados me daría mucha tranquilidad y menos sensación de ir improvisando."
+        "David tiene 20 años y estudia Fisioterapia; desde hace años se ha convertido en el organizador oficial de los viajes de su grupo de amigos, formado por 23 personas. " +
+"Le encanta viajar en grupo y vivir experiencias juntos, pero cada viaje termina suponiéndole un esfuerzo enorme de coordinación y gestión. " +
+"\n\nEs quien se encarga de proponer fechas, buscar destinos, comparar alojamientos, mirar transportes y montar una especie de planning general para que todos sepan qué se va a hacer. " +
+"Aunque sus amigos valoran su papel, David siente que muchas veces la responsabilidad recae solo sobre él. " +
+"\n\nUno de los mayores problemas es la gestión de los pagos: siempre hay alguien que tarda en hacer el Bizum, se mezclan adelantos, reservas y gastos compartidos, y al final acaba llevando una cuenta caótica en notas del móvil o en hojas de cálculo. " +
+"Además, coordinar a 23 personas para que todos reserven lo mismo (mismo vuelo, mismo alojamiento, mismas actividades) es casi misión imposible: siempre hay despistados que compran tarde o se equivocan de horario. " +
+"\n\nTambién se pierde mucho tiempo repitiendo información en diferentes grupos de chat, reenviando enlaces y aclarando qué está incluido y qué no. " +
+"David imagina WePlan como una herramienta que centralice todo el viaje: que sea el lugar único donde ver el itinerario, las reservas y los plazos importantes. " +
+"Le gustaría que la app simplificara los pagos con un fondo común o registros claros, evitando tener que perseguir a sus amigos uno a uno para cuadrar cuentas. " +
+"\n\nPara él, el mayor beneficio sería ahorrar tiempo, reducir el estrés de organizar a tanta gente y poder disfrutar del viaje como uno más del grupo, sin tener que estar todo el rato pendiente de que nada se descontrole."
     },
     {
       name: "Ana López",
