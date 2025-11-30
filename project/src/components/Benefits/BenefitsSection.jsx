@@ -1,4 +1,7 @@
-import react from "../../assets/react.svg";
+import hora from "../../assets/hora.png";
+import travel from "../../assets/travel.png";
+import dinero from "../../assets/dinero.png";
+import molecular from "../../assets/molecular.png";
 import "./BenefitsSection.css";
 
 export default function BenefitsSection() {
@@ -6,26 +9,26 @@ export default function BenefitsSection() {
     {
       title: "Ahorra tiempo",
       description:
-        "La planificación de tu viaje se vuelve fácil y rápida. Organiza todo en un solo lugar y dedica tu tiempo a lo que importa: disfrutar.",
-      icon: react,
+        "Agiliza la planificación de tu viaje al máximo para dedicar tu tiempo a lo que más importa: disfrutar.",
+      icon: hora,
     },
     {
-      title: "Colaboración en tiempo real",
+      title: "Gestiones en grupo",
       description:
-        "Todos los miembros del grupo pueden aportar y decidir en tiempo real. Votaciones y comentarios instantáneos.",
-       icon: react,
+        "Organizad el viaje mediante grupos para que todos los miembros tengan una visión clara del viaje.",
+       icon: travel,
     },
     {
       title: "Control de gastos",
       description:
         "Mantén el control de los gastos del viaje de forma clara y organizada. Todos los pagos, en un solo lugar.",
-       icon: react,
+       icon: dinero,
     },
     {
-      title: "Todo en un solo lugar",
+      title: "Una sola aplicación",
       description:
         "Documentos, actividades, presupuesto y tareas, todo disponible para todos los miembros del grupo, siempre al alcance.",
-       icon: react,
+       icon: molecular,
     },
   ];
 

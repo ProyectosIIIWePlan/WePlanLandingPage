@@ -55,13 +55,19 @@ export default function InterviewsLongSection() {
   // Ejemplos — aquí luego pegas las entrevistas reales completas
   const interviews = [
     {
-      name: "Laura Martínez",
-      role: "Viaja todos los años con su grupo de amigos",
+      name: "Paula Galán Santibáñez",
+      role: "Estudiante que viaja en grupo con sus amigos",
       image: "/images/laura.jpg",
       text:
-        "Organizar un viaje de 8 personas siempre había sido un caos. Entre mensajes sueltos, notas en el móvil y mil capturas de pantalla, " +
-        "acabábamos perdiendo información importante. Me estresaba especialmente el tema de los pagos: quién había puesto qué, quién debía a quién... " +
-        "Con algo como WEPLAN, tener tareas, gastos y decisiones en un solo sitio nos habría ahorrado muchas discusiones y muchísimas horas de organización."
+        "Paula tiene 22 años, es de Plasencia (Extremadura) y estudia un doble grado de Comunicación Audiovisual y Diseño Digital y Multimedia en Madrid. \n\n" +
+"Es una persona extrovertida, creativa y muy unida a su grupo de amigos de toda la vida, que ahora vive repartido por distintas ciudades de España. " +
+"\n\nPara ella, los viajes en grupo son esenciales para mantener la amistad y seguir compartiendo experiencias juntos. " +
+"Le apasionan la fotografía, el arte y descubrir destinos poco comunes, priorizando el enriquecimiento cultural frente a la fiesta o el turismo gastronómico. " +
+"Sin embargo, se define como caótica y desastrosa para la organización, por lo que planificar un viaje le resulta una tarea muy tediosa. " +
+"\n\nCuando se reúnen en Navidad suelen plantear la idea del viaje de verano, pero al regresar cada uno a su ciudad la organización se complica y se va posponiendo. " +
+"En su grupo nadie quiere asumir el tiempo de buscar alojamientos, transporte y actividades, y las decisiones se vuelven largas y poco eficientes. " +
+"\n\nPaula ha probado herramientas como Tricount para controlar los gastos y plataformas como Booking para el alojamiento, pero siente que solo resuelven partes del problema. " +
+"Por eso, ve en WePlan una solución completa que les permita organizar el viaje de forma sencilla, ahorrar tiempo, evitar discusiones por pagos y disfrutar de viajar como cuando lo hacía con sus padres, sin preocuparse de nada."
     },
     {
       name: "Carlos Rivera",
