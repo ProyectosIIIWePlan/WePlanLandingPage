@@ -1,9 +1,9 @@
 import React from "react";
 import "./DemoCTASection.css";
-
+import imagen from "../../assets/elputoqr.png";
 
 export default function DemoCTASection({
-  qrSrc = "../../assets/WePlanLogoTransparente.png",   
+  qrSrc = imagen,   
   title = "Prueba la demo ahora",
   subtitle = "Escanea el código o haz clic en el botón para abrir la demo interactiva de WEPLAN.",
   buttonText = "Abrir demo",

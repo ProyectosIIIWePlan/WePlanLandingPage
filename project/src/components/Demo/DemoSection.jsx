@@ -48,12 +48,12 @@ export default function DemoSection() {
       text: "Comparte el enlace con tus amigos o familia para que todos puedan ver y participar en la planificación."
     },
     {
-      title: "Organiza tareas y pagos",
-      text: "Añade tareas, actividades y gastos. Cada miembro del grupo puede marcar lo que hace o lo que paga."
+      title: "Añade hoteles y transportes",
+      text: "Prueba diferentes opciones de alojamiento y transporte. WEPLAN calcula costes y horarios para todos."
     },
     {
-      title: "Votad ideas en un solo lugar",
-      text: "Propón actividades y deja que el grupo vote. Adiós a los hilos infinitos en WhatsApp."
+      title: "Organiza tareas y pagos",
+      text: "Añade tareas, actividades y gastos. Cada miembro del grupo puede marcar lo que hace o lo que paga."
     },
     {
       title: "Lleva el viaje contigo",
@@ -89,7 +89,7 @@ export default function DemoSection() {
             
             <iframe
               className="demo-video-iframe"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src=""
               title="Demo WEPLAN"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
