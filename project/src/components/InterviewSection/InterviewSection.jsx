@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./InterviewSection.css";
 import foto1 from "../../assets/david_aranda_bracamonte.png";
 import foto2 from "../../assets/pala.png";
+import foto3 from "../../assets/alvaro.png";
 
 function InterviewItem({ index, name, role, image, text }) {
   const ref = useRef(null);
@@ -79,13 +80,15 @@ export default function InterviewsLongSection() {
 " Por eso imagina WePlan como la herramienta ideal para centralizar itinerarios y pagos, ahorrar tiempo y reducir el estrés de organizar a tanta gente."
     },
     {
-      name: "Ana López",
-      role: "Viajes improvisados con distintos grupos",
-      image: "/images/ana.jpg",
+      name: "Álvaro Miguel Expósito",
+      role: "Opositor y organizador de viajes en grupo",
+      image: foto3,
       text:
-        "Lo que más me agobia es cuando en un grupo nadie se decide. En el chat se proponen ideas pero se pierden, nadie sabe qué se ha votado, " +
-        "y al final se decide todo a última hora. Me gustaría poder abrir una app, ver propuestas claras, votar rápido y que quede registrado " +
-        "qué se va a hacer cada día. Creo que eso evitaría muchos malentendidos y discusiones de último momento."
+        "Álvaro tiene 24 años, es de Madrid y está opositando para ser maestro de Educación Primaria." +
+" Su mayor hobby es pasar tiempo con sus amigos, y cada verano suelen organizar un viaje en grupo.\n\n" +
+" Él suele encargarse de proponer casas y destinos, pero la falta de consenso sobre qué visitar convierte la organización en un caos." +
+" También los pagos, bizums, tasas y gestión de documentos se vuelven liosos y acaban siendo una fuente de estrés." +
+" Por eso ve en WePlan un gestor con una interfaz clara que centraliza todo, ahorrando tiempo y muchos dolores de cabeza."
     }
   ];
 
