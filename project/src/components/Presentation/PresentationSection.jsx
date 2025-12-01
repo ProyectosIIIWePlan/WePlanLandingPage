@@ -4,7 +4,7 @@ import "./PresentationSection.css";
 export default function PresentationSection({
   title = "Presentación del proyecto",
   subtitle = "Descubre en detalle cómo WEPLAN ayuda a reducir el estrés de organizar viajes en grupo.",
-  embedSrc = "https://docs.google.com/presentation/d/e/2PACX-PLACEHOLDER/embed?start=false&loop=false&delayms=3000"
+  embedSrc = "https://www.canva.com/design/DAG6MiHg9ec/LlwtIJ12r0tzlusXVHKg1g/view?embed"
 }) {
   return (
     <section className="presentation-section">
