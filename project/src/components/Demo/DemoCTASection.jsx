@@ -7,7 +7,7 @@ export default function DemoCTASection({
   title = "Prueba la demo ahora",
   subtitle = "Escanea el código o haz clic en el botón para abrir la demo interactiva de WEPLAN.",
   buttonText = "Abrir demo",
-  buttonHref = "#"
+  buttonHref = "https://proyectosiiiweplan.github.io/WePlanDemoReact/"
 }) {
   return (
     <section className="demo-cta">
