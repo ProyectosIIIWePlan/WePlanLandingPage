@@ -1,13 +1,13 @@
 import React from "react";
 import "./DemoCTASection.css";
-import imagen from "../../assets/elputoqr.png";
+import imagen from "../../assets/elputoqr.jpg";
 
 export default function DemoCTASection({
   qrSrc = imagen,   
   title = "Prueba la demo ahora",
   subtitle = "Escanea el código o haz clic en el botón para abrir la demo interactiva de WEPLAN.",
   buttonText = "Abrir demo",
-  buttonHref = "#"
+  buttonHref = "https://proyectosiiiweplan.github.io/WePlanDemoReact/"
 }) {
   return (
     <section className="demo-cta">
