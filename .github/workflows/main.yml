@@ -1,7 +1,7 @@
 name: Deploy
 
 permissions:
-  contents: write 
+  contents: write
 
 on:
   push:
@@ -13,31 +13,28 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: project
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-
-      - name: Install dependencies
-        run: npm install 
+        run: npm install
+        working-directory: project      # 👈 MUY IMPORTANTE
 
       - name: Build project
         run: npm run build
+        working-directory: project      # 👈 MUY IMPORTANTE
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
         with:
           name: production-files
-          path: project/dist
+          path: project/dist            # 👈 dist está dentro de project
 
   deploy:
     name: Deploy
