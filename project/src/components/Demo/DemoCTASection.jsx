@@ -1,6 +1,6 @@
 import React from "react";
 import "./DemoCTASection.css";
-import imagen from "../../assets/elputoqr.png";
+import imagen from "../../assets/elputoqr.jpg";
 
 export default function DemoCTASection({
   qrSrc = imagen,   
