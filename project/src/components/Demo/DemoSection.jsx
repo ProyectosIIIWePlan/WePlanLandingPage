@@ -89,7 +89,7 @@ export default function DemoSection() {
             
             <iframe
               className="demo-video-iframe"
-              src="https://youtu.be/fhr9PYeuXEk"
+              src="https://www.youtube.com/embed/fhr9PYeuXEk?si=XhzGpJkTAK2tI514"
               title="Demo WEPLAN"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
